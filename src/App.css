@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar */
+
+.navbar-li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ca4949;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+.navbar-li:hover::after {
+  width: 100%;
+}
+
+/* Main */
+
+.main-img-slide {
+  -webkit-animation: slide 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s infinite
+    alternate-reverse both;
+  animation: slide 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) 3s infinite
+    alternate-reverse both;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0.3;
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0.3;
+  }
+}
+
+.about-img-box:hover {
+  box-shadow: 0px 0px 25px 1px rgba(255, 255, 255, 1);
+}
+
+.tab-li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ca4949;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.tab-li:hover::after {
+  width: 100%;
+}
+
+.tab-on::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ca4949;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.tab-on::after {
+  width: 50%;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ca4949);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  flex-wrap: wrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.3s ease-in-out;
+}
+.work {
+  transition: all 0.3s ease-in-out;
+}
+.work:hover {
+  box-shadow: 0px 0px 25px 1px #ffffff;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+.work img {
+  transition: all 0.3s ease-in-out;
+}
+.work:hover .layer {
+  height: 100%;
+}
